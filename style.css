@@ -291,3 +291,42 @@ footer {
         gap: 1rem;
     }
 }
+
+/* About Section with Profile Picture */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Space between image and text */
+    flex-wrap: wrap; /* Stacks on small screens */
+}
+
+.profile-pic {
+    width: 150px; /* Circular, balanced size */
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Crops to fit without distortion */
+    border: 3px solid #4a90e2; /* Soft blue border for creativity */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Gentle zoom on hover */
+}
+
+.about-text {
+    flex: 1; /* Takes remaining space */
+    min-width: 250px; /* Prevents squishing */
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
